@@ -39,4 +39,8 @@ impl Dataset {
             data: data,
         })
     }
+
+    pub fn get_data(&self) -> Result<&Vec<Record>, Box<dyn Error>> {
+        Ok(&self.data)
+    }
 }
