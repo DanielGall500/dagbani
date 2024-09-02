@@ -1,0 +1,21 @@
+{
+    "language": "Dagbani",
+    "phonology": {
+        "CV": {
+            "restricted": [],
+            "permitted": []
+        },
+        "CVC": {
+            "restricted": [],
+            "permitted": []
+        },
+        "Multi": {
+            "restricted": [],
+            "permitted": []
+        }
+    },
+    "metadata": {
+        "version": "1.0",
+        "date": "2024-08-30"
+    }
+}
