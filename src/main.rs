@@ -1,5 +1,5 @@
-pub mod pw;
 pub mod data_reader;
+pub mod pw;
 use std::{
     process::exit,
     error::Error,
@@ -12,8 +12,10 @@ fn run() -> Result<(), Box<dyn Error>> {
     for word in data_vec {
         let pw = pw::PhonologicalWord::new(word.phonetic_rep.clone());
         let cv_structure = pw.get_cv_structure();
+        let vowels = pw.get_vowels();
 
         println!("{}: {}", word.phonetic_rep, cv_structure);
+        println!("Vowels: {}", vowels)
     }
     Ok(())
 }
