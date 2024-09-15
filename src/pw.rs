@@ -16,7 +16,7 @@ fn remove_diacritics(input: &str) -> String {
 
 // defines the phonological word and its functions
 pub struct PhonologicalWord {
-    phon_word: String,
+    pub phon_word: String,
     pub consonants: [char; 16],
 }
 
