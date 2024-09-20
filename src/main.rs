@@ -1,10 +1,13 @@
 pub mod data_reader;
 pub mod pw;
+pub mod fst;
+pub mod dagbani_fst;
 use std::{
-    collections::HashMap, error::Error, process::exit
+    collections::HashMap, error::Error, process::exit, collections::HashSet
 };
 
 use pw::PhonologicalWord;
+use dagbani_fst::DagbaniFST;
 
 fn exp_permitted_vowels(words: &Vec<PhonologicalWord>) {
     let mut permitted_vowels: HashMap<String, Vec<String>> = HashMap::new();
@@ -23,6 +26,41 @@ fn exp_permitted_vowels(words: &Vec<PhonologicalWord>) {
     }
 }
 
+fn exp_permitted_vowels_adv(words: &Vec<PhonologicalWord>) {
+    // a hash set ensures that it is a unique set of the permitted vowels
+    // rather than storing the same vowels again and again
+    let mut permitted_vowels: HashMap<String, HashSet<char>> = HashMap::new();
+    let fst: DagbaniFST = DagbaniFST::new();
+    for pw in words {
+        let vowels = pw.get_vowels();
+        let vowels_as_vec: Vec<char> = vowels.chars().collect();
+        println!("Vowels: {}", vowels);
+
+        match fst.process(&pw) {
+            Ok(output) => {
+                println!("{}", output);
+
+                // remove irrelevant FST output
+                let cleaned: String = output.chars().filter(|c| *c != 'λ').collect();
+                
+                // Assuming `structure` is defined and you want to use `vowels` here
+                for v in vowels_as_vec {
+                    permitted_vowels.entry(cleaned.clone())
+                        .or_insert(HashSet::new()) // Insert a new vector if the key doesn't exist
+                        .insert(v); // Push the permitted vowels
+                }
+            },
+            Err(e) => {
+                println!("Error: {}", e);
+            },
+        }
+    }
+    for (key, value) in &permitted_vowels {
+        let key: String = key.chars().filter(|c| *c != 'λ').collect();
+        println!("{}: {:?}", key, value);
+    }
+}
+
 fn run() -> Result<(), Box<dyn Error>> {
     let data_path = String::from("data/dagbani-dataset.csv");
     let dataset = data_reader::Dataset::new(data_path)?;
@@ -33,7 +71,8 @@ fn run() -> Result<(), Box<dyn Error>> {
         let pw = pw::PhonologicalWord::new(word.phonetic_rep.clone());
         pw_vec.push(pw);
     }
-    exp_permitted_vowels(&pw_vec);
+    // exp_permitted_vowels(&pw_vec);
+    exp_permitted_vowels_adv(&pw_vec);
     Ok(())
 }
 
