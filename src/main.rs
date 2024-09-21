@@ -29,9 +29,11 @@ fn exp_permitted_vowels(words: &Vec<PhonologicalWord>) {
 fn exp_permitted_vowels_adv(words: &Vec<PhonologicalWord>) {
     // a hash set ensures that it is a unique set of the permitted vowels
     // rather than storing the same vowels again and again
-    let mut permitted_vowels: HashMap<String, HashSet<char>> = HashMap::new();
+    let mut permitted_vowels_mora: HashMap<String, HashSet<char>> = HashMap::new();
+    let mut permitted_vowels_cv: HashMap<String, HashSet<char>> = HashMap::new();
     let fst: DagbaniFST = DagbaniFST::new();
     for pw in words {
+        let cv = pw.get_cv_structure_simple();
         let vowels = pw.get_vowels();
         let vowels_as_vec: Vec<char> = vowels.chars().collect();
         println!("Vowels: {}", vowels);
@@ -45,7 +47,13 @@ fn exp_permitted_vowels_adv(words: &Vec<PhonologicalWord>) {
                 
                 // Assuming `structure` is defined and you want to use `vowels` here
                 for v in vowels_as_vec {
-                    permitted_vowels.entry(cleaned.clone())
+                    // store which vowels appear by mora quantity
+                    permitted_vowels_mora.entry(cleaned.clone())
+                        .or_insert(HashSet::new()) // Insert a new vector if the key doesn't exist
+                        .insert(v); // Push the permitted vowels
+
+                    // store which vowels appear by CV structure
+                    permitted_vowels_cv.entry(cv.clone())
                         .or_insert(HashSet::new()) // Insert a new vector if the key doesn't exist
                         .insert(v); // Push the permitted vowels
                 }
@@ -55,7 +63,14 @@ fn exp_permitted_vowels_adv(words: &Vec<PhonologicalWord>) {
             },
         }
     }
-    for (key, value) in &permitted_vowels {
+
+    // print out the final results
+    for (key, value) in &permitted_vowels_mora {
+        let key: String = key.chars().filter(|c| *c != 'λ').collect();
+        println!("{}: {:?}", key, value);
+    }
+    println!("----");
+    for (key, value) in &permitted_vowels_cv {
         let key: String = key.chars().filter(|c| *c != 'λ').collect();
         println!("{}: {:?}", key, value);
     }

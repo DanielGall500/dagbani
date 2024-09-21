@@ -17,7 +17,7 @@ fn remove_diacritics(input: &str) -> String {
 // defines the phonological word and its functions
 pub struct PhonologicalWord {
     pub phon_word: String,
-    pub consonants: [char; 16],
+    pub consonants: [char; 19],
 }
 
 impl PhonologicalWord {
@@ -25,8 +25,8 @@ impl PhonologicalWord {
     pub fn new(word: String) -> Self {
         PhonologicalWord {
             phon_word: word,
-            consonants: ['b', 'd', 'f', 'g', 'h', 'j', 'k', 'l',
-                         'm', 'n', 'p', 'r', 's', 't', 'w', 'y'],
+            consonants: ['b', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ʔ', 'ʒ',
+                         'm', 'n', 'p', 'r', 's', 't', 'w', 'y', 'ɣ'],
         }
     }
 

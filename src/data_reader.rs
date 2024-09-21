@@ -21,7 +21,6 @@ fn read_csv(path: &str) -> Result<Vec<Record>, Box<dyn Error>> {
 pub struct Record {
     pub phonetic_rep: String,
     pub english_translation: String,
-    pub pos: String,
     pub source: Option<String>,
     pub structure: String,
 }
