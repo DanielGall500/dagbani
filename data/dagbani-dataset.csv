@@ -1,31 +1,50 @@
-phonetic_rep,english_translation,pos,source,structure
-bri,sow,VERB,Sheini 2021 p.28,CCV
-pri,share,VERB,Sheini 2021 p.28,CCV
-fri,get stuck,VERB,Sheini 2021 p.28,CCV
-bli,germinate,VERB,Sheini 2021 p.28,CCV
-pli,cover,VERB,Sheini 2021 p.28,CCV
-gli,go around,VERB,Sheini 2021 p.28,CCV
-gbri,draw,VERB,Sheini 2021 p.28,CCCV
-píígí,choose,VERB,Sheini 2021 p.29,CVVCV
-bé ,live,VERB,Sheini 2021 p.29,CV
-bì ,be mature,VERB,Sheini 2021 p.29,CV
-nám,create,VERB,Sheini 2021 p.30,CVC
-niɛ́m,grind,VERB,Sheini 2021 p.30,CVVC
-fá ,snatch,VERB,Sheini 2021 p.30,CV
-fààkó,relieve,VERB,Sheini 2021 p.30,CVVCV
-fé,pinch,VERB,Sheini 2021 p.30,CV
-fóóí ,withdraw,VERB,Sheini 2021 p.30,CVVV
-fúɣí,undress,VERB,Sheini 2021 p.30,CVCV
-fí,submerge,VERB,Sheini 2021 p.30,CV
-mɛ́rígí ,destroy with pressure,VERB,Sheini 2021 p.30,CVCVCV
-mͻ́rí,swell up,VERB,Sheini 2021 p.30,CVCV
-déégí,collect,VERB,Sheini 2021 p.31,CVVCV
-dͻ̀ɣì ,give birth,VERB,Sheini 2021 p.31,CVCV
-lílí ,vanish,VERB,Sheini 2021 p.33,CVCV
-ló,tie,VERB,Sheini 2021 p.33,CV
-lèlí ,lick,VERB,Sheini 2021 p.33,CVCV
-ʃé ,roast,VERB,Sheini 2021 p.35,CV
-kͻ́rígí ,slaughter,VERB,Sheini 2021 p.36,CVCVCV
-gɨlɨ ,go around,VERB,Sheini 2021 p.37,CVCV
-gúúí ,run,VERB,Sheini 2021 p.37,CVVV
-góógí ,stop a fight or car,VERB,Sheini 2021 p.37,CVVCV
+phonetic_rep,english_translation,source,structure
+dó,weed,Hudu 2016 p. 60,CV
+mɔlɨ́,announce,Hudu 2016 p. 64,CVCV
+mè,build,Hudu 2016 p. 64,CV
+ʤé,dislike,Hudu 2016 p. 64,CCV
+dɨ́m,bite,Hudu 2016 p. 64,CVC
+tʊ̀m,work,Hudu 2016 p. 69,CVC
+kʊ́lɨ́,go home,Hudu 2016 p. 69,CVCV
+bʊ̀hɨ́m,share,Hudu 2016 p. 69,CVCVC
+bʊ̀ʔɨ́sɨ́,describe,Hudu 2016 p. 69,CVCVCV
+ŋʊ̀bɨ̀,chew,Hudu 2018 p. 222,CVCV
+bri,sow,Sheini 2021 p.28,CCV
+pri,share,Sheini 2021 p.28,CCV
+fri,get stuck,Sheini 2021 p.28,CCV
+bli,germinate,Sheini 2021 p.28,CCV
+pli,cover,Sheini 2021 p.28,CCV
+gli,go around,Sheini 2021 p.28,CCV
+gbri,draw,Sheini 2021 p.28,CCCV
+píígí,choose,Sheini 2021 p.29,CVVCV
+bé,live,Sheini 2021 p.29,CV
+bì ,be mature,Sheini 2021 p.29,CV
+nám,create,Sheini 2021 p.30,CVC
+niɛ́m,grind,Sheini 2021 p.30,CVVC
+fá ,snatch,Sheini 2021 p.30,CV
+fààkó,relieve,Sheini 2021 p.30,CVVCV
+fé,pinch,Sheini 2021 p.30,CV
+fóóí ,withdraw,Sheini 2021 p.30,CVVV
+fí,submerge,Sheini 2021 p.30,CV
+mɛ́rígí ,destroy with pressure,Sheini 2021 p.30,CVCVCV
+mɔrí,swell up,Sheini 2021 p.30,CVCV
+déégí,collect,Sheini 2021 p.31,CVVCV
+dɔɣì ,give birth,Sheini 2021 p.31,CVCV
+lílí ,vanish,Sheini 2021 p.33,CVCV
+ló,tie,Sheini 2021 p.33,CV
+lèlí ,lick,Sheini 2021 p.33,CVCV
+ʃé ,roast,Sheini 2021 p.35,CV
+kɔrígí ,slaughter,Sheini 2021 p.36,CVCVCV
+gɨlɨ,go around,Sheini 2021 p.37,CVCV
+góógí ,stop a fight or car,Sheini 2021 p.37,CVVCV
+líhí,look at,Sheini 2021 p.37,CVCV
+chím,fry,Sheini 2021 p.37,CCVC
+kɨ́lím,be round,Sheini 2021 p.48,CVCVC
+ŋmɛ,knock,Sheini 2021 p.49,CCV
+kpɛ,enter,Sheini 2021 p.49,CCV
+dòɣì,give birth,Sheini 2021 p.64,CVCV
+kòhìrì,sell,Sheini 2021 p.65,CVCVCV
+yìɣìsì,get up,Sheini 2021 p.65,CVCVCV
+bù,beat,Sheini 2021 p.65,CV
+chànì,go,Sheini 2021 p.67,CCVCV
+kù,kill,Sheini 2021 p.188,CV
