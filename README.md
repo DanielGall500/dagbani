@@ -1,13 +1,17 @@
 # Dagbani Phonological Toolkit
-
 This repository contains tools and scripts developed in the Rust programming language for the computational analysis of Dagbani phonology, specifically focused on vowel Advanced Tongue Root (ATR) properties and moraic structure. These tools were designed to help researchers verify phonological theories in under-studied languages by analyzing larger datasets.
 
-#### What is "Advanced Tongue Root"?
 Advanced Tongue Root (ATR) is a feature of some languages that affects how vowels are pronounced. It refers to whether the root of the tongue moves forward (advanced) or stays back in the throat when making a vowel sound. 
 - **[+ATR] vowels**: The tongue moves slightly forward, making the vowels sound "tenser" or more open (like "e" or "i").
 - **[–ATR] vowels**: The tongue stays back, making the vowels sound "laxer" or more closed (like "a" or "ɛ").
 
 This distinction helps create different vowel sounds and affects how words are pronounced in certain languages.
+
+#### What is included?
+* A dataset of 50 IPA transcriptions for verb roots in Dagbani, a Gur language spoken in Ghana and the northern region of Togo.
+* Scripts for Pre-processing of IPA transcriptions.
+* Scripts for conversion to Consonant-Vowel structure.
+* Scripts for conversion from Consonant-Vowel structure to moraic structure.
 
 ## Research Overview
 
@@ -19,10 +23,9 @@ In recent years, computational methods have become essential for the analysis of
 
 #### 1. Dagbani Pre-processing Scripts
 These scripts are designed to clean, normalise, and prepare Dagbani text data for further computational processing, particularly focusing on IPA (International Phonetic Alphabet) symbols. The pre-processing handles tasks such as:
-
-Normalization: Ensuring that characters, especially non-ASCII ones (like IPA symbols), are standardized (e.g., converting various forms of the same character to a unified format).
-Transliteration: Converting certain phonetic representations in Dagbani into IPA symbols or other required formats.
-Noise removal: Filtering out non-textual elements or irrelevant characters (e.g diacritics) that could interfere with the analysis.
+* Normalisation: Ensuring that characters, especially non-ASCII ones (like IPA symbols), are standardized (e.g., converting various forms of the same character to a unified format).
+* Transliteration: Converting certain phonetic representations in Dagbani into IPA symbols or other required formats.
+* Noise removal: Filtering out non-textual elements or irrelevant characters (e.g diacritics) that could interfere with the analysis.
 
 #### 2. Phonological Word to CV-Structure Converter
 This script takes Dagbani phonological words as input and outputs their Consonant-Vowel (CV) structure. Every syllable can be broken down into consonants (C) and vowels (V), and this structure provides a simplified representation of how words are constructed.
